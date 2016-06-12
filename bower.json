@@ -1,0 +1,20 @@
+{
+  "name": "femusk-image-generator",
+  "authors": [
+    "Goce Mitevski"
+  ],
+  "description": "",
+  "main": "index.html",
+  "homepage": "https://github.com/femusk/image-generator",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}

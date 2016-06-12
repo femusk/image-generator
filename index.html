@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="mk">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Генератор на сликa за настанот Front-end-средба</title>
+    <meta name="description" content="Генератор на сликa за настанот Front-end-средба">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="js/html2canvas.js"></script>
+    <script src="js/main.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="page-header">
+            <h1 class="page-title">Генератор на сликa за настанот <a class="femusk-meetup-link" href="http://www.meetup.com/Skopje-Front-End-Meetup/">Front-end-средба</a></h1>
+            <p class="lead">Внесете гo редниот број, датумот и времето на средбата и кликнете на „Сними“ за да зачувате PNG. Можете да ја прилагодите и бојата на основата на сликата или пак да изберете боја по случаен избор.</p>
+            <p>Со секое повторно вчитување на страницата се менува и изборот на бои.</p>
+            <ul class="list-inline list-buttons">
+              <li><a class="btn btn-xs btn-default" href="https://github.com/femusk/image-generator">Изворен код</a></li>
+              <li><a class="btn btn-xs btn-default" href="https://github.com/femusk/image-generator/issues">Пријавете грешка</a></li>
+            </ul>
+          </div>
+          <form>
+            <div class="form-group">
+              <label for="femusk_input_id">Реден број на Front-end-средба</label>
+              <div class="input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></span>
+                <input class="form-control" id="femusk_input_id" type="number" value="">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="femusk_input_date">Датум на одржување</label>
+              <div class="input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                <input class="form-control" id="femusk_input_date" type="text" value="">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="femusk_input_time">Време на одржување</label>
+              <div class="input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
+                <input class="form-control" id="femusk_input_time" type="text" value="">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="femusk_input_color_bg">Боја на основата на сликата</label>
+              <div class="input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-tint"></span></span>
+                <input class="form-control" id="femusk_input_color_bg" type="color" value="">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <div class="femusk-photo-wrap">
+            <div id="femusk_photo" class="femusk-photo">
+              <h1 class="femusk-title femusk-text">Front-end-средба #<span id="femusk_id">10</span></h1>
+              <figure>
+                <img class="femusk-symbol" src="img/front-end-meetup-skopje-symbol-bw.png" alt="FEMUSK symbol">
+              </figure>
+              <p class="femusk-event-date femusk-text"><span id="femusk_date">14. јули 2016</span>, <span id="femusk_time">19</span> часот</p>
+              <p class="femusk-event-place femusk-text">хаклаб КИКА</p>
+            </div>            
+            <p class="text-center">Ажуриран приказ на сликата што би ја снимиле</p>
+          </div>
+        </div>
+      </div>
+      <ul class="list-inline list-buttons femusk-btn-save-container">
+        <li><a id="femusk_btn_randomize" href="#" class="btn btn-lg btn-info femusk-btn-save">Измешај бои</a></li>
+        <li><a id="femusk_btn_save" href="#" class="btn btn-lg btn-success femusk-btn-save">Сними</a></li>
+      </ul>
+    </div>
+  </body>
+</html>
