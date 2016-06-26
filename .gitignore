@@ -1,8 +1,5 @@
 #NetBeans project files
 nbproject/
 
-#Bower components
-node_modules/
-
 #Other files
 *.log
