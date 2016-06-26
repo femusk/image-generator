@@ -61,12 +61,19 @@
   text-decoration: underline;
 }
 
-@media (max-width: 992px){
-  .femusk-btn-save-container{
+.list-buttons-lg{
+  margin-top: 20px;
+  margin-bottom: 60px;
+  
+  @media (max-width: 992px){
     text-align: center;
   }
 }
 
 .list-buttons{
   margin-top: 20px;
+}
+
+.form-group-date{
+  position: relative;
 }
