@@ -1,0 +1,29 @@
+{
+  "name": "femusk-image-generator",
+  "version": "1.0.0",
+  "description": "Image generator for the Front-end Meetup Skopje event",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/femusk/image-generator.git"
+  },
+  "keywords": [
+    "image",
+    "generator",
+    "femusk"
+  ],
+  "author": "Goce Mitevski <goce.mitevski@gmail.com> (http://www.nicer2.com/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/femusk/image-generator/issues"
+  },
+  "homepage": "https://github.com/femusk/image-generator#readme",
+  "dependencies": {
+    "bootstrap-datepicker": "^1.6.1",
+    "bootstrap-sass": "^3.3.6",
+    "jquery": "^1.12.4"
+  }
+}
