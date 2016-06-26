@@ -6,11 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Генератор на сликa за настанот Front-end-средба</title>
     <meta name="description" content="Генератор на сликa за настанот Front-end-средба">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    <script src="js/jquery.min.js"></script>
-    <script src="js/html2canvas.js"></script>
-    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <div class="container">
@@ -33,15 +29,15 @@
                 <input class="form-control" id="femusk_input_id" type="number" value="">
               </div>
             </div>
-            <div class="form-group">
-              <label for="femusk_input_date">Датум на одржување</label>
+            <div class="form-group form-group-date">
+              <label for="femusk_input_date">Датум на одржување на средбата</label>
               <div class="input-group">
-                <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-                <input class="form-control" id="femusk_input_date" type="text" value="">
+                <div class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></div>
+                <input class="form-control" id="femusk_input_date" type="text">
               </div>
             </div>
             <div class="form-group">
-              <label for="femusk_input_time">Време на одржување</label>
+              <label for="femusk_input_time">Време на почеток на средбата</label>
               <div class="input-group">
                 <span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
                 <input class="form-control" id="femusk_input_time" type="text" value="">
@@ -63,17 +59,21 @@
               <figure>
                 <img class="femusk-symbol" src="img/front-end-meetup-skopje-symbol-bw.png" alt="FEMUSK symbol">
               </figure>
-              <p class="femusk-event-date femusk-text"><span id="femusk_date">14. јули 2016</span>, <span id="femusk_time">19</span> часот</p>
+              <p class="femusk-event-date femusk-text"><span id="femusk_date">...</span>, <span id="femusk_time">19</span> часот</p>
               <p class="femusk-event-place femusk-text">хаклаб КИКА</p>
             </div>            
             <p class="text-center">Ажуриран приказ на сликата што би ја снимиле</p>
           </div>
         </div>
       </div>
-      <ul class="list-inline list-buttons femusk-btn-save-container">
-        <li><a id="femusk_btn_randomize" href="#" class="btn btn-lg btn-info femusk-btn-save">Измешај бои</a></li>
-        <li><a id="femusk_btn_save" href="#" class="btn btn-lg btn-success femusk-btn-save">Сними</a></li>
+      <ul class="list-inline list-buttons-lg">
+        <li><a id="femusk_btn_randomize" href="" class="btn btn-lg btn-info btn-randomize">Измешај бои</a></li>
+        <li><a id="femusk_btn_save" href="" class="btn btn-lg btn-success btn-save">Сними</a></li>
       </ul>
     </div>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" charset="utf-8"></script>
+    <script src="js/html2canvas.js"></script>
+    <script src="js/image-generator.js"></script>
   </body>
 </html>
