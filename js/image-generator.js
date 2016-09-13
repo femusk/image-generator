@@ -19,6 +19,7 @@ $(document).ready(function () {
 
   var femusk_photo = $('#femusk_photo');
   var femusk_text = $('.femusk-text');
+  var femusk_text_font_family = femusk_text.css('font-family');
   var femusk_id = $('#femusk_id');
   var femusk_input_id = $('#femusk_input_id');
   var femusk_time = $('#femusk_time');
@@ -28,6 +29,27 @@ $(document).ready(function () {
   var femusk_btn_save = $('#femusk_btn_save');
   var femusk_btn_randomize = $('#femusk_btn_randomize');
   var femusk_input_color_bg = $('#femusk_input_color_bg');
+  var femusk_font = $('#femusk_font');
+
+  femusk_font.change(function (e) {
+
+    var default_font = 'Основен';
+    var selected_font = $(this).children(':selected').text();
+
+    if (selected_font !== default_font) {
+      WebFont.load({
+        google: {
+          families: [selected_font + ':400,700:latin,cyrillic']
+        }
+      });
+    }
+
+    if (selected_font === default_font) {
+      selected_font = femusk_text_font_family;
+    }
+
+    femusk_text.css({'font-family': selected_font});
+  });
 
   var datepicker_options = {
     container: '.form-group-date',
@@ -116,7 +138,7 @@ $(document).ready(function () {
     // 1) add leading zero, so we get 0XY or 0X
     // 2) append leading zero with parsed out int value of R/G/B
     //    converted to HEX string representation
-    // 3) slice out 2 last chars (get last 2 chars) => 
+    // 3) slice out 2 last chars (get last 2 chars) =>
     //    => we get XY from 0XY and 0X stays the same
     return  "#"
             + ('0' + parseInt(color[0], 10).toString(16)).slice(-2)
