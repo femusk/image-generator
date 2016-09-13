@@ -36,6 +36,7 @@ $(document).ready(function () {
     var default_font = 'Основен';
     var selected_font = $(this).children(':selected').text();
 
+    // Load selected font from Google Fonts
     if (selected_font !== default_font) {
       WebFont.load({
         google: {
@@ -44,10 +45,14 @@ $(document).ready(function () {
       });
     }
 
+    // If default font selected revert to default font-family
     if (selected_font === default_font) {
       selected_font = femusk_text_font_family;
+    } else {
+      selected_font = '"' + selected_font + '"';
     }
 
+    // Set font-family
     femusk_text.css({'font-family': selected_font});
   });
 
