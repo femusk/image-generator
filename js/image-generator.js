@@ -1,5 +1,5 @@
-// За доработка:
-// - изборник на фонтови од Google Fonts
+// TO DO:
+// - Text size slider
 
 // L18N for Bootstrap Datepicker
 $.fn.datepicker.dates['mk'] = {
@@ -31,16 +31,22 @@ $(document).ready(function () {
   var femusk_input_color_bg = $('#femusk_input_color_bg');
   var femusk_font = $('#femusk_font');
 
-  femusk_font.change(function (e) {
+  femusk_font.on('change keyup', function (e) {
 
     var default_font = 'Основен';
     var selected_font = $(this).children(':selected').text();
+
+    WebFontConfig = {
+      // Redraw canvas anytime a font has been loaded, considering possibly
+      // specified delays for html2canvas()
+      fontactive: femusk_draw_canvas()
+    };
 
     // Load selected font from Google Fonts
     if (selected_font !== default_font) {
       WebFont.load({
         google: {
-          families: [selected_font + ':400,700:latin,cyrillic']
+          families: [selected_font + ':400,700:cyrillic']
         }
       });
     }
@@ -53,7 +59,8 @@ $(document).ready(function () {
     }
 
     // Set font-family
-    femusk_text.css({'font-family': selected_font});
+    femusk_text.css({'font-family': selected_font + ', sans-serif'});
+
   });
 
   var datepicker_options = {
@@ -110,10 +117,11 @@ $(document).ready(function () {
   function femusk_draw_canvas() {
     html2canvas(femusk_photo, {
       onrendered: function (canvas) {
-        //document.body.appendChild(canvas);
+//        document.body.appendChild(canvas);
         femusk_btn_save.attr('href', canvas.toDataURL());
         femusk_btn_save.attr('download', 'femusk-#' + femusk_input_id.val() + '.png');
-      }
+      },
+      timeout: 1000 // Make sure canvas is not updated before the font is actually loaded
     });
   }
 
