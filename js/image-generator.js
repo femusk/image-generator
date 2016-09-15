@@ -1,6 +1,3 @@
-// TO DO:
-// - Text size slider
-
 // L18N for Bootstrap Datepicker
 $.fn.datepicker.dates['mk'] = {
   days: ["недела", "понеделник", "вторник", "среда", "четврток", "петок", "сабота"],
@@ -30,6 +27,7 @@ $(document).ready(function () {
   var femusk_btn_randomize = $('#femusk_btn_randomize');
   var femusk_input_color_bg = $('#femusk_input_color_bg');
   var femusk_font = $('#femusk_font');
+  var femusk_input_text_size = $('#femusk_input_text_size');
 
   femusk_font.on('change keyup', function (e) {
 
@@ -92,6 +90,9 @@ $(document).ready(function () {
   femusk_input_color_bg.on('change', femusk_update_color_bg);
   femusk_input_color_bg.on('change', femusk_draw_canvas);
 
+  femusk_input_text_size.on('change', femusk_update_text_size);
+  femusk_input_text_size.on('change', femusk_draw_canvas);
+
   function femusk_update_colors() {
     femusk_photo.css('background-color', femusk_get_random_hex_color);
     femusk_text.css('color', invertColor(getHexColor(femusk_photo.css('background-color'))));
@@ -131,6 +132,10 @@ $(document).ready(function () {
 
   function femusk_get_random_hex_color() {
     return '#' + (Math.random() * 0xFFFFFF << 0).toString(16);
+  }
+
+  function femusk_update_text_size() {
+    femusk_text.css({'font-size': femusk_input_text_size.val() + 'px'});
   }
 
   // http://stackoverflow.com/a/30381663/3190066
