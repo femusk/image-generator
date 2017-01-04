@@ -1,5 +1,8 @@
 #NetBeans project files
-nbproject/
+nbproject
+
+#Node.js modules
+node_modules
 
 #Other files
 *.log
