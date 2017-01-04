@@ -4,6 +4,7 @@
   "description": "Image generator for the Front-end Meetup Skopje event",
   "main": "index.js",
   "scripts": {
+    "start": "sass --watch scss:css --style compressed",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,8 +23,8 @@
   },
   "homepage": "https://github.com/femusk/image-generator#readme",
   "dependencies": {
-    "bootstrap-datepicker": "^1.6.1",
-    "bootstrap-sass": "^3.3.6",
+    "bootstrap-datepicker": "^1.6.4",
+    "bootstrap-sass": "^3.3.7",
     "jquery": "^1.12.4"
   }
 }
