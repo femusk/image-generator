@@ -28,6 +28,22 @@ $(document).ready(function () {
   var femusk_input_color_bg = $('#femusk_input_color_bg');
   var femusk_font = $('#femusk_font');
   var femusk_input_text_size = $('#femusk_input_text_size');
+  var googleFontsDataPromise = new Promise(function (resolve, reject) {
+    const xhr = new XMLHttpRequest();
+    url = "https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyCxUZCT6hOR0PM3QEuEvmFYDVKAiQKdgIo";
+    xhr.open("GET", url);
+    xhr.onload = () => resolve(xhr.responseText);
+    xhr.onerror = () => reject(xhr.statusText);
+    xhr.send();
+  }).then(function (responseText) {
+    var googleFontsData = JSON.parse(responseText);
+    googleFontsData.items.map(function (element, key) {
+      console.log(element);
+      if (element.subsets.includes("cyrillic")) {
+        femusk_font.append('<option id=' + key + '>' + element.family + '</option>')
+      }
+    });
+  });
 
   femusk_font.on('change keyup', function (e) {
 
@@ -44,7 +60,7 @@ $(document).ready(function () {
     if (selected_font !== default_font) {
       WebFont.load({
         google: {
-          families: [selected_font + ':400,700:cyrillic']
+          families: [selected_font + ':400,700']
         }
       });
     }
@@ -57,7 +73,7 @@ $(document).ready(function () {
     }
 
     // Set font-family
-    femusk_text.css({'font-family': selected_font + ', sans-serif'});
+    femusk_text.css({ 'font-family': selected_font + ', sans-serif' });
 
   });
 
@@ -118,7 +134,7 @@ $(document).ready(function () {
   function femusk_draw_canvas() {
     html2canvas(femusk_photo, {
       onrendered: function (canvas) {
-//        document.body.appendChild(canvas);
+        //        document.body.appendChild(canvas);
         femusk_btn_save.attr('href', canvas.toDataURL());
         femusk_btn_save.attr('download', 'femusk-#' + femusk_input_id.val() + '.png');
       },
@@ -135,7 +151,7 @@ $(document).ready(function () {
   }
 
   function femusk_update_text_size() {
-    femusk_text.css({'font-size': femusk_input_text_size.val() + 'px'});
+    femusk_text.css({ 'font-size': femusk_input_text_size.val() + 'px' });
   }
 
   // http://stackoverflow.com/a/30381663/3190066
@@ -146,10 +162,10 @@ $(document).ready(function () {
 
     //leave only "R,G,B" :
     color = color
-            .replace("rgba", "") //must go BEFORE rgb replace
-            .replace("rgb", "")
-            .replace("(", "")
-            .replace(")", "");
+      .replace("rgba", "") //must go BEFORE rgb replace
+      .replace("rgb", "")
+      .replace("(", "")
+      .replace(")", "");
     color = color.split(","); // get Array["R","G","B"]
 
     // 0) add leading #
@@ -158,10 +174,10 @@ $(document).ready(function () {
     //    converted to HEX string representation
     // 3) slice out 2 last chars (get last 2 chars) =>
     //    => we get XY from 0XY and 0X stays the same
-    return  "#"
-            + ('0' + parseInt(color[0], 10).toString(16)).slice(-2)
-            + ('0' + parseInt(color[1], 10).toString(16)).slice(-2)
-            + ('0' + parseInt(color[2], 10).toString(16)).slice(-2);
+    return "#"
+      + ('0' + parseInt(color[0], 10).toString(16)).slice(-2)
+      + ('0' + parseInt(color[1], 10).toString(16)).slice(-2)
+      + ('0' + parseInt(color[2], 10).toString(16)).slice(-2);
   }
 
   // https://jsfiddle.net/salman/f9Re3/
