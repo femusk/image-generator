@@ -2,10 +2,4 @@
 nbproject
 
 #Node.js modules
-node_modules/
-
-#Other files
-*.log
-
-#Sass cache
-.sass-cache
+node_modules
