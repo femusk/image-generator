@@ -1,139 +1,139 @@
 <!DOCTYPE html>
 <html lang="mk">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Генератор на сликa за настанот Front-end Meetup Skopje</title>
-    <meta name="description" content="Генератор на сликa за настанот Front-end-средба">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="page-header">
-            <h1 class="page-title">Генератор на сликa за <a class="femusk-meetup-link" href="http://www.meetup.com/Skopje-Front-End-Meetup/">Front-end Meetup Skopje</a></h1>
-            <p class="lead">Внесете гo редниот број, датумот и времето на средбата и кликнете на „Сними“ за да зачувате PNG. Можете да ја прилагодите и бојата на основата на сликата или пак да изберете боја по случаен избор.</p>
-            <p>Со секое повторно вчитување на страницата се менува и изборот на бои.</p>
-            <ul class="list-inline list-buttons">
-              <li><a class="btn btn-xs btn-default" href="https://github.com/femusk/image-generator">Изворен код</a></li>
-              <li><a class="btn btn-xs btn-default" href="https://github.com/femusk/image-generator/issues">Пријавете грешка</a></li>
-            </ul>
-          </div>
-          <form>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="femusk_input_id">Реден број на Front-end-средба</label>
-                  <div class="input-group">
-                    <span class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></span>
-                    <input class="form-control" id="femusk_input_id" type="number" value="">
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group form-group-date">
-                  <label for="femusk_input_date">Датум на одржување на средбата</label>
-                  <div class="input-group">
-                    <div class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></div>
-                    <input class="form-control" id="femusk_input_date" type="text">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="femusk_input_time">Време на почеток на средбата</label>
-                  <div class="input-group">
-                    <span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
-                    <input class="form-control" id="femusk_input_time" type="text" value="">
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="femusk_input_color_bg">Боја на основата на сликата</label>
-                  <div class="input-group">
-                    <span class="input-group-addon"><span class="glyphicon glyphicon-tint"></span></span>
-                    <input class="form-control" id="femusk_input_color_bg" type="color" value="">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="femusk_font">Изглед на текст</label>
-                  <select id="femusk_font" class="form-control">
-                    <option selected="selected">Основен</option>
-                    <option>Anonymous Pro</option>
-                    <option>Arimo</option>
-                    <option>Cuprum</option>
-                    <option>Cousine</option>
-                    <option>Didact Gothic</option>
-                    <option>Exo 2</option>
-                    <option>El Messiri</option>
-                    <option>Fira Sans</option>
-                    <option>Fira Mono</option>
-                    <option>Jura</option>
-                    <option>Marmelad</option>
-                    <option>Open Sans</option>
-                    <option>Open Sans Condensed</option>
-                    <option>Poiret One</option>
-                    <option>Roboto</option>
-                    <option>Roboto Condensed</option>
-                    <option>Roboto Mono</option>
-                    <option>Rubik</option>
-                    <option>Noto Sans</option>
-                    <option>PT Sans</option>
-                    <option>PT Sans Narrow</option>
-                    <option>PT Mono</option>
-                    <option>Prosto One</option>
-                    <option>Scada</option>
-                    <option>Ubuntu</option>
-                    <option>Ubuntu Condensed</option>
-                    <option>Ubuntu Mono</option>
-                    <option>Underdog</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="femusk_input_text_size">Големина на текст</label>
-                  <div class="input-group">
-                    <span class="input-group-addon"><span class="glyphicon glyphicon-text-size"></span></span>
-                    <input class="form-control" id="femusk_input_text_size" value="18" type="range" min="18" max="23" step="1">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </form>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Генератор на сликa за настанот Front-end Meetup Skopje</title>
+  <meta name="description" content="Генератор на сликa за настанот Front-end-средба">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="my-5">
+          <h1 class="mb-4">Генератор на сликa за <a class="femusk-meetup-link"
+              href="http://www.meetup.com/Skopje-Front-End-Meetup/">Front-end Meetup Skopje</a></h1>
+          <p class="lead">Внесете гo редниот број, датумот и времето на средбата и кликнете на „Сними“ за да зачувате
+            PNG. Можете да ја прилагодите и бојата на основата на сликата или пак да изберете боја по случаен избор.</p>
+          <p>Со секое повторно вчитување на страницата се менува и изборот на бои.</p>
+          <ul class="list-inline list-buttons">
+            <li class="list-inline-item"><a class="btn btn-sm btn-outline-secondary"
+                href="https://github.com/femusk/image-generator">Изворен код</a></li>
+            <li class="list-inline-item"><a class="btn btn-sm btn-outline-secondary"
+                href="https://github.com/femusk/image-generator/issues">Пријавете
+                грешка</a></li>
+          </ul>
         </div>
-        <div class="col-md-6">
-          <div class="femusk-photo-wrap">
-            <div id="femusk_photo" class="femusk-photo">
-              <h1 class="femusk-title femusk-text">Front-end-средба #<span id="femusk_id">10</span></h1>
-              <figure>
-                <img class="femusk-symbol" src="img/front-end-meetup-skopje-symbol-bw.png" alt="FEMUSK symbol">
-              </figure>
-              <p class="femusk-event-date femusk-text"><span id="femusk_date">...</span>, <span id="femusk_time">19</span> часот</p>
-              <p class="femusk-event-place femusk-text">хаклаб КИКА</p>
+        <form class="my-3">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="femusk_input_id">Реден број на Front-end-средба</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></span>
+                  <input class="form-control" id="femusk_input_id" type="number" value="">
+                </div>
+              </div>
             </div>
-            <p class="text-center">Ажуриран приказ на сликата што би ја снимиле</p>
+            <div class="col-md-6">
+              <div class="form-group form-group-date">
+                <label for="femusk_input_date">Датум на одржување на средбата</label>
+                <input class="form-control" id="femusk_input_date" type="text">
+              </div>
+            </div>
           </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="femusk_input_time">Време на почеток на средбата</label>
+                <input class="form-control" id="femusk_input_time" type="text" value="">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="femusk_input_color_bg">Боја на основата на сликата</label>
+                <input class="form-control" id="femusk_input_color_bg" type="color" value="">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="femusk_font">Изглед на текст</label>
+                <select id="femusk_font" class="form-control">
+                  <option selected="selected">Основен</option>
+                  <option>Anonymous Pro</option>
+                  <option>Arimo</option>
+                  <option>Cuprum</option>
+                  <option>Cousine</option>
+                  <option>Didact Gothic</option>
+                  <option>Exo 2</option>
+                  <option>El Messiri</option>
+                  <option>Fira Sans</option>
+                  <option>Fira Mono</option>
+                  <option>Jura</option>
+                  <option>Marmelad</option>
+                  <option>Open Sans</option>
+                  <option>Open Sans Condensed</option>
+                  <option>Poiret One</option>
+                  <option>Roboto</option>
+                  <option>Roboto Condensed</option>
+                  <option>Roboto Mono</option>
+                  <option>Rubik</option>
+                  <option>Noto Sans</option>
+                  <option>PT Sans</option>
+                  <option>PT Sans Narrow</option>
+                  <option>PT Mono</option>
+                  <option>Prosto One</option>
+                  <option>Scada</option>
+                  <option>Ubuntu</option>
+                  <option>Ubuntu Condensed</option>
+                  <option>Ubuntu Mono</option>
+                  <option>Underdog</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="femusk_input_text_size">Големина на текст</label>
+                <input class="form-control" id="femusk_input_text_size" value="18" type="range" min="18" max="23"
+                  step="1">
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="d-flex align-items-center justify-content-between">
+          <a id="femusk_btn_randomize" href="" class="btn btn-info btn-randomize">Измешај бои</a>
+          <a id="femusk_btn_save" href="" class="btn btn-success btn-save">Сними</a>
         </div>
       </div>
-      <ul class="list-inline list-buttons-lg">
-        <li><a id="femusk_btn_randomize" href="" class="btn btn-lg btn-info btn-randomize">Измешај бои</a></li>
-        <li><a id="femusk_btn_save" href="" class="btn btn-lg btn-success btn-save">Сними</a></li>
-      </ul>
+      <div class="col-md-6">
+        <div class="femusk-photo-wrap">
+          <div id="femusk_photo" class="femusk-photo">
+            <h1 class="femusk-title femusk-text">Front-end-средба #<span id="femusk_id">10</span></h1>
+            <figure>
+              <img class="femusk-symbol" src="img/front-end-meetup-skopje-symbol-bw.png" alt="FEMUSK symbol">
+            </figure>
+            <p class="femusk-event-date femusk-text"><span id="femusk_date">...</span>, <span id="femusk_time">19</span>
+              часот</p>
+            <p class="femusk-event-place femusk-text">хаклаб КИКА</p>
+          </div>
+          <p class="text-center">Ажуриран приказ на сликата што би ја снимиле</p>
+        </div>
+      </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
-    <script src="js/jquery-1.12.4.min.js"></script>
-    <script src="js/bootstrap-datepicker.min.js" charset="utf-8"></script>
-    <script src="js/html2canvas.js"></script>
-    <script src="js/image-generator.js"></script>
-  </body>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootstrap-datepicker.min.js" charset="utf-8"></script>
+  <script src="js/html2canvas.js"></script>
+  <script src="js/image-generator.js"></script>
+</body>
+
 </html>
