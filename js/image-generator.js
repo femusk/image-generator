@@ -38,7 +38,6 @@ $(document).ready(function () {
   }).then(function (responseText) {
     var googleFontsData = JSON.parse(responseText);
     googleFontsData.items.map(function (element, key) {
-      console.log(element);
       if (element.subsets.includes("cyrillic")) {
         femusk_font.append('<option id=' + key + '>' + element.family + '</option>')
       }
