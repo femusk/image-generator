@@ -24,7 +24,7 @@
   "homepage": "https://github.com/femusk/image-generator#readme",
   "dependencies": {
     "bootstrap-datepicker": "^1.6.4",
-    "bootstrap-sass": "^3.3.7",
+    "bootstrap-sass": "^3.4.1",
     "jquery": "^3.4.1"
   }
 }
