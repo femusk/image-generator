@@ -7,7 +7,7 @@ $.fn.datepicker.dates['mk'] = {
   monthsShort: ["јан", "фев", "мар", "апр", "мај", "јун", "јул", "авг", "сеп", "окт", "ное", "дек"],
   today: "Денес",
   clear: "Исчисти",
-  format: "d. MM yyyy",
+  format: "d MM yyyy",
   titleFormat: "MM yyyy", /* Leverages same syntax as 'format' */
   weekStart: 1
 };
