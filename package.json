@@ -4,7 +4,7 @@
   "description": "Image generator for the Front-end Meetup Skopje event",
   "main": "index.js",
   "scripts": {
-    "start": "sass --watch scss:css --style compressed",
+    "start": "sass --watch scss:css --sourcemap none --style compressed",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,6 +25,6 @@
   "dependencies": {
     "bootstrap-datepicker": "^1.6.4",
     "bootstrap-sass": "^3.3.7",
-    "jquery": "^1.12.4"
+    "jquery": "^3.4.1"
   }
 }
