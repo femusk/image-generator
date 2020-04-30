@@ -27,7 +27,7 @@
     "bootstrap-datepicker": "^1.6.4",
     "gulp": "^4.0.2",
     "gulp-sass": "^4.0.2",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "popper.js": "^1.15.0"
   }
 }
